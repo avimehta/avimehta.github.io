@@ -1,0 +1,12 @@
+<html>
+<script>
+  var request = "https://www.google-analytics.com/r/collect?v=1&tid=UA-24014624-2&t=pageview&dp=/&cid=1&_r=1&jid=1";
+  var req = new XMLHttpRequest();
+  req.open("POST", request, true);
+  req.withCredentials = true;
+  req.setRequestHeader('Content-Type', 'text/plain');
+  req.send('');
+
+  window.navigator,sendBeacon(request, '');
+</script>
+</html

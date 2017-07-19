@@ -1,0 +1,65 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+
+    <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "requests": {
+        "transaction": "${host}/collect?${basePrefix}&t=transaction&${baseSuffix}",
+        "productDetail": "${host}/collect?${basePrefix}&t=event&${baseSuffix}&ni=1&ec=ecom&ea=productdetail"
+      },
+      "vars": {
+        "account": "UA-12345-6"
+      },
+      "triggers": {
+        "ecomTransaction": {
+          "on": "visible",
+          "request": "transaction",
+          "extraUrlParams": {
+            "ti": "12345",
+            "ta": "westernWear",
+            "tr": "50.00",
+            "ts": "32.00", 
+            "tt": "12.00",
+            "cu": "EUR"
+          }
+        },
+        "enhancedEcomTransaction": {
+          "on": "visible",
+          "request": "productDetail",
+          "extraUrlParams": {
+            "pr1id": "${productId}",
+            "pr1nm": "${productName}",
+            "pr1br": "${productBrand}",
+            "pa": "detail"
+          },
+          "selector": "#productInfo",
+          "visibilitySpec": {
+            "visiblePercentageMin": 20,
+            "totalTimeMin": 500,
+            "continuousTimeMin": 200
+          }
+
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+    <div style="min-height: 1000px">Scroll down for very important product details.</div>
+    <amp-img id="productInfo" layout="fixed" width="1000" height="1000"
+      src="https://lh3.googleusercontent.com/5rcQ32ml8E5ONp9f9-Rf78IofLb9QjS5_0mqsY1zEFc=w300-h200-no" 
+      data-vars-product-id="SomeProductId"
+      data-vars-product-name="SomeProductName"
+      data-vars-product-brand="SomeProductBrand">
+      Product details :).
+    </amp-img>
+  </body>
+</html>
