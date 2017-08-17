@@ -1,68 +1,141 @@
-<html><head></head><body>
-List of test cases to test. Click away!
+<html><head><style>h3  {padding-top:20px;} h4 {padding-top:20px; padding-left: 10px;} a, div {padding-left: 10px;} td { vertical-align: top; padding: 10px;}</style></head><body>
+List of test cases to test. Note the test case you want to test, remember the expectations. Click on the links for that test case and check cookies/hits. Click away!
 <br>
-<h3>Not opted in </h3>
-<h4>Case 1.1:</h4> Non-AMP
+<table>
+<td><h3>Not opted in </h3>
+<h4>Case 1.1:</h4> <div> Non-AMP:
+  <ul>
+    <li>Expect a GA generated client id
+  </ul>
+</div>
 <a href="/amp_set/non-amp-opt-out.html">non-AMP</a>
 <br>
 
-<h4>Case 1.2:</h4> AMP (O)
+<h4>Case 1.2:</h4> <div> AMP (O):
+  <ul>
+    <li> Expect an AMP cookie based client id
+  </ul>
+</div>
 <a href="/amp_set/amp-o-opt-out.html">AMP (O)</a>
 <br>
 
-<h4>Case 1.3:</h4> AMP (C)
+<h4>Case 1.3:</h4> <div> AMP (C):
+  <ul>
+    <li> Expect a local storage generated client id
+  </ul>
+</div>
 <a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-out.html">AMP (C)</a>
 <br>
 
-<h4>Case 1.4:</h4> non-AMP -> AMP (O) -> non-AMP
+<h4>Case 1.4:</h4> <div> non-AMP -> AMP (O) -> non-AMP:
+  <ul>
+    <li> Expect a GA generated client id to be used on all three pages
+  </ul>
+</div>
 <a href="/amp_set/non-amp-opt-out.html">non-AMP</a>
 <br>
 
-<h4>Case 1.5:</h4> AMP (O) -> non-AMP -> AMP(O)
+<h4>Case 1.5:</h4> <div> AMP (O) -> non-AMP -> AMP(O):
+  <ul>
+    <li> Expect an AMP generated client id
+  </ul>
+</div>
 <a href="/amp_set/amp-o-opt-out.html">AMP (O)</a>
 <br>
-
-<h4>Case 1.6:</h4> AMP (C) -> non-AMP -> AMP(C)
+<h4>Case 1.6:</h4> <div> AMP (C) -> non-AMP -> AMP(C):
+  <ul>
+    <li> Expect different client ids on cache and non-AMP page
+  </ul>
+</div>
 <a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-out.html">AMP (C)</a>
 <br>
+</td>
+<td>
+  <h3>Opted in </h3>
 
-<h3>Opted in </h3>
+  <h4>Case 2.1:</h4> <div> non-AMP:
+    <ul>
+      <li> Expect a GA generated client id
+      <li>AMP_TOKEN set to '$NOT_FOUND'
+    </ul>
+  </div>
+  <a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
+  <br>
 
-<h4>Case 2.1:</h4> non-AMP
-<a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
-<br>
+  <h4>Case 2.2:</h4> <div> AMP (O):
+    <ul>
+      <li>Expect an AMP generated client id
+      <li>AMP_TOKEN set to '$NOT_FOUND'
+    </ul>
+  </div>
+  <a href="/amp_set/amp-o-opt-in.html">AMP (O)</a>
+  <br>
 
-<h4>Case 2.2:</h4> AMP (O)
-<a href="/amp_set/amp-o-opt-in.html">AMP (O)</a>
-<br>
+  <h4>Case 2.3:</h4> <div> AMP (C):
+    <ul>
+      <li> Expect an AMP API generated client id
+    </ul>
+  </div>
+  <a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-in.html">AMP (C)</a>
+  <br>
 
-<h4>Case 2.3:</h4> AMP (C)
-<a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-in.html">AMP (C)</a>
-<br>
+  <h4>Case 2.4:</h4> <div>  non-AMP -> AMP (C) -> non-AMP:
+    <ul>
+      <li> Expect client id to change after first page view
+      <li> Last two pages use same client id
+      <li>AMP_TOKEN set to '$NOT_FOUND' for first page but is valid token on last page
+    </ul>
+  </div>
+  <a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
+  <br>
 
-<h4>Case 2.4:</h4> non-AMP -> AMP (C) -> non-AMP
-<a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
-<br>
+  <h4>Case 2.5:</h4> <div>  AMP (O) -> AMP (C) -> AMP(O):
+    <ul>
+      <li> Expect client id to change after first page view
+      <li> Last two pages use same client id
+      <li> AMP_TOKEN set to '$NOT_FOUND' for first page but is valid token on last page
+    </ul>
+  </div>
+  <a href="/amp_set/amp-o-opt-in.html">AMP (O)</a>
+  <br>
 
-<h4>Case 2.5:</h4> AMP (O) -> AMP (C) -> AMP(O)
-<a href="/amp_set/amp-o-opt-in.html">AMP (O)</a>
-<br>
+  <h4>Case 2.6:</h4> <div> non-AMP, AMP (C), non-AMP (no referrers):
+    <ul>
+      <li> Expect client id to change after first page view
+      <li> Last two pages use same client id
+      <li> AMP_TOKEN set to '$NOT_FOUND' for first and last page
+    </ul>
+  </div>
+  <a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
+  <br>
 
-<h4>Case 2.6:</h4> non-AMP, AMP (C), non-AMP (no referrers)
-<a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
-<br>
+  <h4>Case 2.7:</h4> <div> AMP (O) -> non-AMP -> AMP(O):
+    <ul>
+      <li> Expect all three pages to use same client id
+      <li> AMP token set to $NOT_FOUND on all pages
+    </ul>
+  </div>
+  <a href="/amp_set/amp-o-opt-in.html">AMP (O):</a>
+  <br>
 
-<h4>Case 2.7:</h4> AMP (O) -> non-AMP -> AMP(O)
-<a href="/amp_set/amp-o-opt-in.html">AMP (O)</a>
-<br>
+  <h4>Case 2.8:</h4> <div> non-AMP -> AMP (O) -> non-AMP:
+    <ul>
+      <li> Expect all three pages to use same client id
+      <li> AMP token set to $NOT_FOUND on all pages
+    </ul>
+  </div>
+  <a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
+  <br>
 
-<h4>Case 2.8:</h4> non-AMP -> AMP (O) -> non-AMP
-<a href="/amp_set/non-amp-opt-in.html">non-AMP</a>
-<br>
-
-<h4>Case 2.9:</h4> AMP (C) -> non-AMP -> AMP(C)
-<a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-in.html">AMP (C)</a>
-<br>
-
+  <h4>Case 2.9:</h4> <div> AMP (C) -> non-AMP -> AMP(C):
+    <ul>
+      <li> Expect all three pages to use same client id
+      <li> AMP token written on second page
+    </ul>
+  </div>
+  <a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-in.html">AMP (C)</a>
+  <br>
+</td>
+</table>
 Bonus: AMPCID page to delete cookie: <a href="http://ampcid.google.com">AMPCID</a>
 </body></html>
