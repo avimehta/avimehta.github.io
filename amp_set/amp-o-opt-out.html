@@ -1,0 +1,45 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome landing page to test how analytics works with adwords.</title>
+    <link rel="canonical" href="#"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+
+    <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-24014624-3"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+    <h3>Not opted in </h3>
+    <h4>Case 1.2:</h4> AMP (O)
+    <a href="/amp_set/amp-o-opt-out.html">this</a>
+    <br>
+
+    <h4>Case 1.4:</h4> non-AMP -> AMP (O) -> non-AMP
+    <a href="/amp_set/non-amp-opt-out.html">non-AMP</a>
+    <br>
+
+    <h4>Case 1.5:</h4> AMP (O) -> non-AMP -> AMP(O)
+    <a href="/amp_set/non-amp-opt-out.html">non-AMP</a>
+    <br>
+    <hr>
+    <a href="/amp_set/">BACK</a>
+  </body>
+</html>

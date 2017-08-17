@@ -1,0 +1,55 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>An awesome landing page to test how analytics works with adwords.</title>
+    <link rel="canonical" href="#"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="amp-google-client-id-api" content="googleanalytics">
+    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+
+    <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-24014624-3"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+    <h3>Opted in </h3>
+
+    <h4>Case 2.3:</h4> AMP (C)
+    <a href="https://www.google.com/amp/test.zoinks.in/amp_set/amp-c-opt-in.html">this</a>
+    <br>
+
+    <h4>Case 2.4:</h4> non-AMP -> AMP (C) -> non-AMP
+    <a href="http://test.zoinks.in/amp_set/non-amp-opt-in.html">non-AMP</a>
+    <br>
+
+    <h4>Case 2.5:</h4> AMP (O) -> AMP (C) -> AMP(O)
+    <a href="http://test.zoinks.in/amp_set/amp-o-opt-in.html">AMP (O)</a>
+    <br>
+
+    <h4>Case 2.6:</h4> non-AMP, AMP (C), non-AMP (no referrers)
+    Copy the following into location bar: http://test.zoinks.in/amp_set/non-amp-opt-in.html
+    <br>
+
+    <h4>Case 2.9:</h4> AMP (C) -> non-AMP -> AMP(C)
+    <a href="http://test.zoinks.in/amp_set/non-amp-opt-in.html">non-AMP</a>
+    <br>
+    <hr>
+    <a href="http://test.zoinks.in/amp_set/">BACK</a>
+  </body>
+</html>
