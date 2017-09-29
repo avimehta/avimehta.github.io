@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AMP Client ID library example</title>
+  <script async src="cidapi.js"></script>
+</head>
+<body>
+  AMP Client ID library example
+  <script>
+    function ampCidApiOnload(callback) {
+      (self.googleAmpCidApiOnload = self.googleAmpCidApiOnload || []).push(callback);
+    }
+    ampCidApiOnload(function(api) {
+      api.getScopedCid('googleanalytics', 'AIzaSyA65lEHUEizIsNtlbNo-l2K18dT680nsaM', function(err, cid) {
+        if (err) {
+          alert(err);
+        } else {
+          alert('Client ID:' + cid);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

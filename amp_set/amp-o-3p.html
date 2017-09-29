@@ -1,0 +1,32 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AMP Cache page with optin flag.</title>
+    <link rel="canonical" href="#"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="amp-google-client-id-api" content="googleanalytics">
+    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+
+    <amp-analytics id="analytics1">
+    <script type="application/json">
+    {
+      "requests": {
+        "pageview": "//example.com?cid=CLIENT_ID(AMP_ECID_GOOGLE)"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+  </body>
+</html>
