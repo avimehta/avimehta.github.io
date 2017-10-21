@@ -13,7 +13,7 @@
       (self.googleAmpCidApiOnload = self.googleAmpCidApiOnload || []).push(callback);
     }
     ampCidApiOnload(function(api) {
-      api.getScopedCid('googleanalytics', 'AIzaSyA65lEHUEizIsNtlbNo-l2K18dT680nsaM', function(err, cid) {
+      api.getScopedCid('AMP_ECID_GOOGLE', 'AIzaSyA65lEHUEizIsNtlbNo-l2K18dT680nsaM', function(err, cid) {
         if (err) {
           alert(err);
         } else {
