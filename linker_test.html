@@ -16,7 +16,7 @@ ga('linker:autoLink', [/.*/]);
 <script>
   let s = document.createElement('span');
   s.innerText = 'Hello World';
-  document.body.appendChild(s);
+  setTimeout(function () {document.body.appendChild(s)}, 1000);
 </script>
 
 </head>
