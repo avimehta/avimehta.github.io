@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)http://csp-nonce-propagation.com/nonce_snippet.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  </script>
-  <!-- <script async="" src="/test_files/gtm.js" nonce=""></script> -->
-
-<!-- Google Analytics -->
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-XXXX-Y', 'auto', {'allowLinker': true});
-ga('send', 'pageview');
-ga('require', 'linker');
-ga('linker:autoLink', [/.*/]);
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-XXXX-Y', 'auto', {'allowLinker': true});
+  ga('send', 'pageview');
+  ga('require', 'linker');
+  ga('linker:autoLink', [/.*/]);
 </script>
 <script type="text/javascript" id="" src="/a.js"></script>
 <script>
-var d=function(){for(var b=[""],c=document.location.hostname.split("."),a=0;a<c.length;a++){var e=c.slice(a).join(".");b.push(e,"."+e)}return b},p=function(){for(var b=["","/"],c=document.location.pathname.split("/"),a="",e=1;e<c.length;e++)a+="/"+c[e],b.push(a,a+"/");return b},ddp=function(b,c,a){document.cookie=b+"=; "+(c?"domain="+c+"; ":"")+(void 0!=a?"path="+a+"; ":"")+"expires=Thu, 01-Jan-1970 00:00:01 GMT;"},deleteCookie=function(b){var c=d(),a=p();a.push(void 0);for(var e=0;e<c.length;e++)for(var f=
-0;f<a.length;f++)if(ddp(b,c[e],a[f]),!document.cookie.match("(^|;)\\s*"+er(b)+"(=|;|$)"))return;fail("Failed to delete cookie: "+b)},deleteAllCookies=function(){for(var b=document.cookie.split(";"),c=0;c<b.length;c++){var a=b[c].match(/\s*([^=]+)(?:=|;|$)/);a&&2==a.length&&deleteCookie(a[1])}""!=document.cookie&&fail("Not all cookies are deleted! Cookies: "+document.cookie)},er=function(b){return b.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1")};
+  var d=function(){for(var b=[""],c=document.location.hostname.split("."),a=0;a<c.length;a++){var e=c.slice(a).join(".");b.push(e,"."+e)}return b},p=function(){for(var b=["","/"],c=document.location.pathname.split("/"),a="",e=1;e<c.length;e++)a+="/"+c[e],b.push(a,a+"/");return b},ddp=function(b,c,a){document.cookie=b+"=; "+(c?"domain="+c+"; ":"")+(void 0!=a?"path="+a+"; ":"")+"expires=Thu, 01-Jan-1970 00:00:01 GMT;"},deleteCookie=function(b){var c=d(),a=p();a.push(void 0);for(var e=0;e<c.length;e++)for(var f=
+  0;f<a.length;f++)if(ddp(b,c[e],a[f]),!document.cookie.match("(^|;)\\s*"+er(b)+"(=|;|$)"))return;fail("Failed to delete cookie: "+b)},deleteAllCookies=function(){for(var b=document.cookie.split(";"),c=0;c<b.length;c++){var a=b[c].match(/\s*([^=]+)(?:=|;|$)/);a&&2==a.length&&deleteCookie(a[1])}""!=document.cookie&&fail("Not all cookies are deleted! Cookies: "+document.cookie)},er=function(b){return b.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1")};
 </script>
-
 </head>
 
 <body>
   <a href="#" onclick="deleteAllCookies()"> Delete Cookies </a><br>
   <a href="http://test-zoinks-in.appspot.com/static/linker_old.html">test-zoinks-in - old</a><br>
   <a href="http://test-zoinks-in.appspot.com/static/linker_new.html">test-zoinks-in - new</a><br>
-
