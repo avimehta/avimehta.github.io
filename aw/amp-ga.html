@@ -1,0 +1,47 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AMP cache page without optin flag.</title>
+    <link rel="canonical" href="#"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+
+    <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-24014624-3"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+    </amp-analytics>
+    <li>
+      <a href="https://test.zoinks.in/aw/amp-ga.html">AMP (O) GA</a>
+    <li>
+      <a href="https://test.zoinks.in/aw/amp-gtag.html">AMP (O) GTAG</a>
+    <li>
+      <a href="https://test.zoinks.in/aw/amp-gtm.html">AMP (O) GTM</a>
+    <li>
+      <a href="https://www.google.com/amp/test.zoinks.in/aw/amp-ga.html">AMP (C) GA</a>
+    <li>
+      <a href="https://www.google.com/amp/test.zoinks.in/aw/amp-gtag.html">AMP (C) GTAG</a>
+    <li>
+      <a href="https://www.google.com/amp/test.zoinks.in/aw/amp-gtm.html">AMP (C) GTM</a>
+    <li>
+      <a href="https://test.zoinks.in/aw/non-amp-gtag.html">non-AMP GTAG</a>
+    <li>
+      <a href="https://test.zoinks.in/aw/non-amp-ga.html">non-AMP GA</a>
+  </body>
+</html>
