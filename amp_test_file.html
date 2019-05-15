@@ -24,8 +24,13 @@
         }
       },
       "linkers": {
-        "abcd": {
-          "ids": {},
+        "a": {
+          "ids": { "a": "b"},
+          "proxyOnly": false,
+          "destinationDomains": ["fatpuppiesandkittens.com", "test.zoinks.in"]
+        },
+        "b": {
+          "ids": { "b": "QUERY_PARAM(b)"},
           "proxyOnly": false,
           "destinationDomains": ["fatpuppiesandkittens.com", "test.zoinks.in"]
         }
