@@ -15,11 +15,13 @@
     <script type="application/json">
     {
       "vars": {
-        "account": "$IF(EXTERNAL_REFERRER, 1, 0)",
-        "not_account": "$IF(DOCUMENT_REFERRER, 1, 0)"
-      },
+        "account": "$IF(EXTERNAL_REFERRER, 1, 0)"
+        },
       "triggers": {
         "trackPageview": {
+          extraUrlParams: {
+            "not_account": "$IF(DOCUMENT_REFERRER, 1, 0)"
+          },
           "on": "visible",
           "request": "pageview"
         }
