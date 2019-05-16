@@ -20,8 +20,8 @@
       "triggers": {
         "trackPageview": {
           "extraUrlParams": {
-            "doc_ref": "DOCUMENT_REFERRER",
-            "ex_ref": "EXTERNAL_REFERRER"
+            "doc_ref": "$IF(DOCUMENT_REFERRER, 1, 0)",
+            "ex_ref": "$IF(EXTERNAL_REFERRER, 1, 0)"
           },
           "on": "visible",
           "request": "pageview"
