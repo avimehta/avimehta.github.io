@@ -16,6 +16,7 @@
     {
       "vars": {
         "account": "$IF(EXTERNAL_REFERRER, 1, 0)"
+        "account": "$IF(DOCUMENT_REFERRER, 1, 0)"
       },
       "triggers": {
         "trackPageview": {
