@@ -16,11 +16,12 @@
     {
       "vars": {
         "account": "$IF(EXTERNAL_REFERRER, 1, 0)"
-        },
+      },
       "triggers": {
         "trackPageview": {
           "extraUrlParams": {
-            "not_account": "$IF(DOCUMENT_REFERRER, 1, 0)"
+            "doc_ref": "DOCUMENT_REFERRER",
+            "ex_ref": "EXTERNAL_REFERRER"
           },
           "on": "visible",
           "request": "pageview"
